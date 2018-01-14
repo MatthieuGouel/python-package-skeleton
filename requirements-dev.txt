@@ -1,7 +1,6 @@
-pylint
+pylama
 pytest
 pytest-cov
-pylama
 coverage
 sphinx
 -rrequirements.txt
