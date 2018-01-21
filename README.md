@@ -2,37 +2,37 @@
 
 ## Installation
 
+Note : The installation into a virtualenv is heavily recommended.
+
 If you want to install the package :
 
 ```
 pip install .
 ```
 
-You can also directly install the package with the dev requirements :
+For development purposes, you can install the package in editable mode with the dev requirements.
 
 ```
-pip install . -r requirements-dev.txt
+pip install -e . -r requirements-dev.txt
 ```
-
-Note : You may want to install it in a virtual environment.
 
 ## Syntax
 
-You can check the syntax using pylint (you must have pylint package installed first) :
+You can check the syntax using pylama (you must have pylama package installed first) :
 
 ```
-pylint --rcfile=setup.cfg skeleton
+pylama skeleton
 ```
 
-Or with tox (you must have tox package installed first) :
+You can also use tox (you must have tox package installed first) :
 
 ```
-tox -e pylint
+tox -e pylama
 ```
 
-## Coverage
+## Test coverage
 
-To see the test coverage, you must install the package with the dev requirements (see installation section).
+To execute the test coverage, you must install the package with the dev requirements (see installation section).
 
 Then, you can run the coverage with the following command :
 
@@ -40,7 +40,7 @@ Then, you can run the coverage with the following command :
 coverage run --source skeleton -m py.test
 ```
 
-Or with tox (you must have tox package installed first) :
+You can also use tox (you must have tox package installed first) :
 
 ```
 tox -e pytest
