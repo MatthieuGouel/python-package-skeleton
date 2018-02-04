@@ -1,5 +1,9 @@
 # Skeleton
 
+[![license](https://img.shields.io/github/license/MatthieuGouel/python-package-skeleton.svg)](https://github.com/MatthieuGouel/python-package-skeleton/blob/master/LICENSE)
+
+Skeleton package to begin projects faster.
+
 ## Installation
 
 Note : The installation into a virtualenv is heavily recommended.
@@ -43,5 +47,5 @@ coverage run --source skeleton -m py.test
 You can also use tox (you must have tox package installed first) :
 
 ```
-tox -e pytest
+tox -e test
 ```
