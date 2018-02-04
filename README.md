@@ -22,16 +22,16 @@ pip install -e . -r requirements-dev.txt
 
 ## Syntax
 
-You can check the syntax using pylama (you must have pylama package installed first) :
+You can check the syntax using flake8 (you must have flake8 package installed first) :
 
 ```
-pylama skeleton
+flake8 skeleton
 ```
 
 You can also use tox (you must have tox package installed first) :
 
 ```
-tox -e pylama
+tox -e lint
 ```
 
 ## Test coverage
