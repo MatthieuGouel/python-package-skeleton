@@ -49,3 +49,16 @@ You can also use tox (you must have tox package installed first) :
 ```
 tox -e test
 ```
+
+## Documentation
+
+The documentation of the project can be found under the directory `./doc/_build/html`.
+
+To rebuild the configuration, you can use the makefile (or the make.bat for Windows users) :
+
+```
+$ cd docs/
+$ make clean
+$ sphinx-apidoc -F -P -o . ../skeleton
+$ make html
+```
