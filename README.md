@@ -1,6 +1,6 @@
 # Skeleton
 
-[![license](https://img.shields.io/github/license/MatthieuGouel/python-package-skeleton.svg)](https://github.com/MatthieuGouel/python-package-skeleton/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/matthieugouel/python-package-skeleton.svg)](https://github.com/matthieugouel/python-package-skeleton/blob/master/LICENSE)
 
 Skeleton package to begin projects faster.
 
