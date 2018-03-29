@@ -2,15 +2,19 @@ language: python
 python:
     - "3.6"
 
-branches:
-  only:
-    - "master"
+stages:
+  - lint
+  - test
 
 install:
     - pip install -r requirements-dev.txt
 
-script:
-    - tox -e test
+jobs:
+    include:
+        - stage: lint
+          script: tox -e lint
+        - stage: test
+          script: tox -e test
 
 after_success:
     coveralls
