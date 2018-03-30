@@ -1,9 +1,4 @@
-"""Initialization module of the package."""
-import pkg_resources
+"""Initialization of the package."""
 
-try:
-    __version__ = pkg_resources.get_distribution('skeleton').version
-except pkg_resources.DistributionNotFound:  # pragma: no cover
-    __version__ = "Not installed"
-
+__version__ = '0.1.0'
 __all__ = ()
