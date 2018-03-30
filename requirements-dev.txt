@@ -6,4 +6,5 @@ coverage
 coveralls
 mypy
 sphinx
+sphinx_rtd_theme
 -rrequirements.txt

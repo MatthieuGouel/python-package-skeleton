@@ -1,6 +1,7 @@
 # Skeleton
 
 [![license](https://img.shields.io/github/license/matthieugouel/python-package-skeleton.svg)](https://github.com/matthieugouel/python-package-skeleton/blob/master/LICENSE)
+[![Documentation Status](https://readthedocs.org/projects/python-package-skeleton/badge/?version=latest)](http://python-package-skeleton.readthedocs.io/en/latest/?badge=latest)
 
 Skeleton package to begin projects faster.
 
@@ -20,7 +21,7 @@ For development purposes, you can install the package in editable mode with the 
 pip install -e . -r requirements-dev.txt
 ```
 
-## Syntax
+## Syntax checking
 
 You can check the syntax using flake8 (you must have flake8 package installed first) :
 
@@ -36,7 +37,7 @@ tox -e lint
 
 ## Test coverage
 
-To execute the test coverage, you must install the package with the dev requirements (see installation section).
+To execute the test coverage, you must install the dev requirements (see installation section).
 
 Then, you can run the coverage with the following command :
 
@@ -48,6 +49,20 @@ You can also use tox (you must have tox package installed first) :
 
 ```
 tox -e test
+```
+
+## Type checking
+
+You use annotation to do static type checking with mypy (you must have mypy package installed first) :
+
+```
+mypy skeleton
+```
+
+You can also use tox (you must have tox package installed first) :
+
+```
+tox -e type
 ```
 
 ## Documentation
