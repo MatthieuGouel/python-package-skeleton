@@ -56,10 +56,19 @@ docs/_build/
 # Gitlab CI/CD
 .gitlab-ci.yml
 
+# Mypy
+.mypy_cache/
+
+# Vagrant
+.vagrant
+
+# MacOS
+.DS_Store
+
+# Swap
+*.swp
+
 # Others
 .idea
-.DS_Store
 env
-*.swp
-.vagrant
 tags
