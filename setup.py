@@ -1,4 +1,4 @@
-"""Setup file for skeleton package."""
+"""Setup of skeleton package."""
 import uuid
 
 from setuptools import setup, find_packages, find_version
@@ -12,6 +12,7 @@ setup(
     version=find_version('skeleton', '__init__.py'),
     author="Matthieu Gouel",
     author_email="matthieu.gouel@gmail.com",
+    url="https://github.com/matthieugouel/python-package-skeleton",
     description="Skeleton for Python3 projects",
     long_description=open('README.md').read(),
     license='MIT',
@@ -24,7 +25,6 @@ setup(
         'Operating System :: MacOS',
         'License :: OSI Approved :: MIT License',
     ],
-    url="https://github.com/matthieugouel/python-package-skeleton",
     include_package_data=True,
     packages=find_packages(),
     install_requires=REQS
