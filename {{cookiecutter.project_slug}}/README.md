@@ -9,7 +9,7 @@
 
 ## Installation
 
-Note : The installation into a virtualenv is heavily recommended.
+Note : The use of a virtual environment is heavily recommended.
 
 If you want to install the package :
 
@@ -61,7 +61,7 @@ mypy {{ cookiecutter.project_slug }}
 
 You can also use tox :
 
-```bash
+```
 tox -e type
 ```
 
@@ -83,5 +83,5 @@ $ make html
 When you are satisfied with your code and you want to bump a version, just run the command :
 
 ```bash
-bumversion [major | minor | patch]
+bumversion [ major | minor | patch ]
 ```
