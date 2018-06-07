@@ -1,0 +1,9 @@
+{
+    "full_name": "Matthieu Gouel",
+    "email": "matthieu.gouel@gmail.com",
+    "username": "matthieugouel",
+    "project_name": "Python Package Skeleton",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_short_description": "Python Package Skeleton short description",
+    "project_version": "0.1.0"
+}

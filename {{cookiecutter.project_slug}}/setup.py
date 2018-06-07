@@ -1,19 +1,19 @@
-"""Setup of skeleton package."""
+"""Setup for {{cookiecutter.project_slug}} package."""
 import uuid
 
-from setuptools import setup, find_packages, find_version
-from pip.req import parse_requirements
+from setuptools import setup, find_packages
+from pip._internal.req import parse_requirements
 
 INSTALL_REQS = parse_requirements('requirements.txt', session=uuid.uuid1())
 REQS = [str(ir.req) for ir in INSTALL_REQS]
 
 setup(
-    name="skeleton",
-    version=find_version('skeleton', '__init__.py'),
-    author="Matthieu Gouel",
-    author_email="matthieu.gouel@gmail.com",
-    url="https://github.com/matthieugouel/python-package-skeleton",
-    description="Skeleton for Python3 projects",
+    name="{{ cookiecutter.project_slug }}",
+    version="{{ cookiecutter.project_version }}",
+    author="{{ cookiecutter.full_name }}",
+    author_email="{{ cookiecutter.email }}",
+    url="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.project_slug }}",
+    description="{{ cookiecutter.project_short_description }}",
     long_description=open('README.md').read(),
     license='MIT',
     classifiers=[

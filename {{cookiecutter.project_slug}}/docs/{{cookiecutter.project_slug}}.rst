@@ -1,10 +1,10 @@
-skeleton package
+{{ cookiecutter.project_slug }} package
 ================
 
 Module contents
 ---------------
 
-.. automodule:: skeleton
+.. automodule:: {{ cookiecutter.project_slug }}
     :members:
     :undoc-members:
     :show-inheritance:

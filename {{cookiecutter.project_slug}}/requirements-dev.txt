@@ -5,6 +5,7 @@ pytest-cov
 coverage
 coveralls
 mypy
+bumpversion
 sphinx
 sphinx_rtd_theme
 -rrequirements.txt
