@@ -13,13 +13,13 @@ Note : The use of a virtual environment is heavily recommended.
 
 If you want to install the package :
 
-```bash
+```
 pip install .
 ```
 
 For development purposes, you can install the package in editable mode with the dev requirements.
 
-```bash
+```
 pip install -e . -r requirements-dev.txt
 ```
 
@@ -27,13 +27,13 @@ pip install -e . -r requirements-dev.txt
 
 You can check the syntax using flake8 :
 
-```bash
+```
 flake8 {{ cookiecutter.project_slug }}
 ```
 
 You can also use tox :
 
-```bash
+```
 tox -e lint
 ```
 
@@ -47,7 +47,7 @@ coverage run --source {{ cookiecutter.project_slug }} -m py.test
 
 You can also use tox :
 
-```bash
+```
 tox -e test
 ```
 
@@ -55,7 +55,7 @@ tox -e test
 
 You use annotation to do static type checking with mypy :
 
-```bash
+```
 mypy {{ cookiecutter.project_slug }}
 ```
 
@@ -71,17 +71,17 @@ The documentation of the project can be found under the directory `./doc/_build/
 
 To rebuild the configuration, you can use the makefile (or the make.bat for Windows users) :
 
-```bash
-$ cd docs/
-$ make clean
-$ sphinx-apidoc -F -P -o . ../{{ cookiecutter.project_slug }}
-$ make html
+```
+cd docs/
+make clean
+sphinx-apidoc -F -P -o . ../{{ cookiecutter.project_slug }}
+make html
 ```
 
 ## Version bumping
 
 When you are satisfied with your code and you want to bump a version, just run the command :
 
-```bash
+```
 bumversion [ major | minor | patch ]
 ```
