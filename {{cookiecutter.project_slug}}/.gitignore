@@ -68,7 +68,5 @@ docs/_build/
 # Swap
 *.swp
 
-# Others
-.idea
-env
-tags
+# Temporary files
+*.tmp
