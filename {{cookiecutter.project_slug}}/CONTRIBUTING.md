@@ -42,7 +42,7 @@ tox -e test
 
 ## Type checking
 
-You use annotation to do static type checking with mypy :
+If you used annotations to do static type checking with mypy :
 
 ```
 mypy {{ cookiecutter.project_slug }}
