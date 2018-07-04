@@ -1,11 +1,6 @@
 """Setup for {{cookiecutter.project_slug}} package."""
-import uuid
 
 from setuptools import setup, find_packages
-from pip._internal.req import parse_requirements
-
-INSTALL_REQS = parse_requirements('requirements.txt', session=uuid.uuid1())
-REQS = [str(ir.req) for ir in INSTALL_REQS]
 
 setup(
     name="{{ cookiecutter.project_slug }}",
@@ -27,5 +22,5 @@ setup(
     ],
     include_package_data=True,
     packages=find_packages(),
-    install_requires=REQS
+    install_requires=[],
 )
