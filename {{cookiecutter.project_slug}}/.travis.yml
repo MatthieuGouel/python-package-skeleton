@@ -3,21 +3,24 @@ python:
     - "3.6"
 
 stages:
-  - lint
-  - test
-  - type
+    - lint
+    - type
+    - test
+
 
 install:
-    - pip install -r requirements-dev.txt
+    - pip install pipenv
+    - pipenv install --dev
 
 jobs:
     include:
         - stage: lint
-          script: tox -e lint
-        - stage: test
-          script: tox -e test
+          script: pipenv run tox -e lint
         - stage: type
-          script: tox -e type
+          script: pipenv run tox -e type
+        - stage: test
+          script: pipenv run tox -e test
+
 
 after_success:
-    coveralls
+    pipenv run coveralls

@@ -9,6 +9,7 @@ setup(
     author_email="{{ cookiecutter.email }}",
     url="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.project_slug }}",
     description="{{ cookiecutter.project_short_description }}",
+    long_description=open('README.md').read(),
     license='MIT',
     classifiers=[
         'Topic :: Utilities',

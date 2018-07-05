@@ -7,6 +7,7 @@ name = "pypi"
 
 [dev-packages]
 tox = "*"
+tox-pipenv = "*"
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"

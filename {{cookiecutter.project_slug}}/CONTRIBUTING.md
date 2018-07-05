@@ -26,20 +26,6 @@ You can also use tox :
 tox -e lint
 ```
 
-## Test coverage
-
-You can run the coverage with the following command :
-
-```bash
-coverage run --source {{ cookiecutter.project_slug }} -m py.test
-```
-
-You can also use tox :
-
-```
-tox -e test
-```
-
 ## Type checking
 
 If you used annotations to do static type checking with mypy :
@@ -52,6 +38,20 @@ You can also use tox :
 
 ```
 tox -e type
+```
+
+## Test coverage
+
+You can run the coverage with the following command :
+
+```bash
+coverage run --source {{ cookiecutter.project_slug }} -m py.test
+```
+
+You can also use tox :
+
+```
+tox -e test
 ```
 
 ## Documentation
@@ -72,5 +72,5 @@ make html
 To update the version of the project, just run the following command according to the nature of the change.
 
 ```
-bumversion [ major | minor | patch ]
+bumpversion [ major | minor | patch ]
 ```
