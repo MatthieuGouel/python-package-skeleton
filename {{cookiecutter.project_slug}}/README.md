@@ -15,13 +15,13 @@ You can install the package from sources after cloning the project and navigatin
 This project uses `pipenv` as a package manager.
 
 ```
-pipenv install
+make install
 ```
 
 Then activate the project's virtualenv with the following command.
 
 ```
-pipenv shell
+make shell
 ```
 
 ## Usage

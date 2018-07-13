@@ -9,7 +9,7 @@ This project uses `pipenv` as a package manager.
 For development purposes, you can install the package in editable mode with the development requirements.
 
 ```
-pipenv install --dev -e .
+make install-dev
 ```
 
 ## Syntax checking
@@ -17,7 +17,7 @@ pipenv install --dev -e .
 You can check the syntax using flake8 :
 
 ```
-flake8 {{ cookiecutter.project_slug }}
+make lint
 ```
 
 You can also use tox :
@@ -31,7 +31,7 @@ tox -e lint
 If you used annotations to do static type checking with mypy :
 
 ```
-mypy {{ cookiecutter.project_slug }}
+make type
 ```
 
 You can also use tox :
@@ -44,8 +44,8 @@ tox -e type
 
 You can run the coverage with the following command :
 
-```bash
-coverage run --source {{ cookiecutter.project_slug }} -m py.test
+```
+make test
 ```
 
 You can also use tox :
