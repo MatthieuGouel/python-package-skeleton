@@ -20,6 +20,7 @@ setup(
         'Operating System :: MacOS',
         'License :: OSI Approved :: MIT License',
     ],
+    python_requires='>=3.6',
     include_package_data=True,
     packages=find_packages(),
     install_requires=[],
