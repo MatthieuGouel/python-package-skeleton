@@ -19,6 +19,6 @@ type:
 	@$(ENVRUN) mypy {{ cookiecutter.project_slug }}
 
 test:
-	@$(ENVRUN) py.test --cov={{ cookiecutter.project_slug }} --cov-fail-under=80
+	@$(ENVRUN) py.test
 
 .PHONY: install install-dev shell format lint mypy test
