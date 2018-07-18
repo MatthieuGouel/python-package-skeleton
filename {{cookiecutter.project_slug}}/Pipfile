@@ -6,8 +6,6 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-tox = "*"
-tox-pipenv = "*"
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
@@ -18,10 +16,6 @@ bumpversion = "*"
 black = "*"
 Sphinx = "*"
 sphinx_rtd_theme = "*"
-
-
-[requires]
-python_version = "3.6"
 
 [pipenv]
 allow_prereleases = true

@@ -18,7 +18,16 @@ lint:
 type:
 	@$(ENVRUN) mypy {{ cookiecutter.project_slug }}
 
-test:
+tests:
 	@$(ENVRUN) py.test
 
-.PHONY: install install-dev shell format lint mypy test
+generate-docs:
+	@sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
+
+clean-docs:
+	@$(MAKE) clean -C ./docs
+
+docs: generate-docs
+	@$(MAKE) html -C ./docs
+
+.PHONY: install install-dev shell format lint mypy tests docs
