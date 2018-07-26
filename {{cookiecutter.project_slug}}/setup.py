@@ -10,6 +10,7 @@ setup(
     url="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.project_slug }}",
     description="{{ cookiecutter.project_short_description }}",
     long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     license="MIT",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",

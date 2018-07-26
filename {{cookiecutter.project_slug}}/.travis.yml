@@ -7,7 +7,6 @@ stages:
   - type
   - tests
 
-
 install:
   - pip install pipenv
   - make install-dev
@@ -20,7 +19,6 @@ jobs:
       script: make type
     - stage: tests
       script: make tests
-
 
 after_success:
   pipenv run coveralls
