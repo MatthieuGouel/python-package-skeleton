@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+twine = "*"
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"

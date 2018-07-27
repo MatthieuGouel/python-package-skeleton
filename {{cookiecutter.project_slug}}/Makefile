@@ -1,10 +1,10 @@
 ENVRUN = pipenv run
 
 install:
-	@pipenv install
+	@pipenv install --three
 
 install-dev:
-	@pipenv install --dev -e .
+	@pipenv install --three --dev -e .
 
 shell:
 	@pipenv shell
@@ -22,12 +22,24 @@ tests:
 	@$(ENVRUN) py.test
 
 generate-docs:
-	@sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
-
-clean-docs:
-	@$(MAKE) clean -C ./docs
+	@$(ENVRUN) sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
 
 docs: generate-docs
 	@$(MAKE) html -C ./docs
+
+build: docs
+	@$(ENVRUN) python setup.py sdist bdist_wheel
+
+upload-test: build
+	@$(ENVRUN) twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+
+upload: build
+	@$(ENVRUN) twine upload dist/*
+
+clean-docs:
+	@$(MAKE) clean -C ./docs > /dev/null
+
+clean: clean-docs
+	@rm -Rf dist build
 
 .PHONY: install install-dev shell format lint mypy tests docs
