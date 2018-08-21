@@ -18,16 +18,16 @@ lint:
 type:
 	@$(ENVRUN) mypy {{ cookiecutter.project_slug }}
 
-tests:
+test:
 	@$(ENVRUN) py.test --cov={{ cookiecutter.project_slug }} --cov-report term-missing -vs --cov-fail-under=80
 
-generate-docs:
+generate-doc:
 	@$(ENVRUN) sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
 
-docs: generate-docs
+doc: generate-doc
 	@$(MAKE) html -C ./docs
 
-build: docs
+build: doc
 	@$(ENVRUN) python setup.py sdist bdist_wheel
 
 upload-test: build
@@ -36,10 +36,10 @@ upload-test: build
 upload: build
 	@$(ENVRUN) twine upload dist/*
 
-clean-docs:
+clean-doc:
 	@$(MAKE) clean -C ./docs > /dev/null
 
-clean: clean-docs
+clean: clean-doc
 	@rm -Rf dist build
 
-.PHONY: install install-dev shell format lint mypy tests docs
+.PHONY: install install-dev shell format lint mypy test doc
