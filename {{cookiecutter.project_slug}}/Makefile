@@ -19,7 +19,7 @@ type:
 	@$(ENVRUN) mypy {{ cookiecutter.project_slug }}
 
 tests:
-	@$(ENVRUN) py.test
+	@$(ENVRUN) py.test --cov={{ cookiecutter.project_slug }} --cov-report term-missing -vs --cov-fail-under=80
 
 generate-docs:
 	@$(ENVRUN) sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
