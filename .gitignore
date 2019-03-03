@@ -72,3 +72,6 @@ docs/_build/
 .idea
 env
 tags
+
+# VS Code
+.vscode

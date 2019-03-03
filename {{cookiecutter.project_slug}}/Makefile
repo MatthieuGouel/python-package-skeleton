@@ -10,7 +10,7 @@ shell:
 	@pipenv shell
 
 format:
-	@$(ENVRUN) black --py36 -l 88 -S {{ cookiecutter.project_slug }} tests
+	@$(ENVRUN) black --py36 -l 88 {{ cookiecutter.project_slug }} tests
 
 lint:
 	@$(ENVRUN) flake8 {{ cookiecutter.project_slug }} tests

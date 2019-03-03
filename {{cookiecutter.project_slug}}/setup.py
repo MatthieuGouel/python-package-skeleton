@@ -21,7 +21,7 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     include_package_data=True,
     packages=find_packages(),
     install_requires=[],

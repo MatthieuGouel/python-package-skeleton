@@ -70,3 +70,6 @@ docs/_build/
 
 # Temporary files
 *.tmp
+
+# VS Code
+.vscode
