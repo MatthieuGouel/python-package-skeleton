@@ -7,7 +7,7 @@ setup(
     version="{{ cookiecutter.project_version }}",
     author="{{ cookiecutter.full_name }}",
     author_email="{{ cookiecutter.email }}",
-    url="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.project_slug }}",
+    url="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.project_repository }}",
     description="{{ cookiecutter.project_short_description }}",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
