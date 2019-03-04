@@ -21,6 +21,8 @@ type:
 test:
 	@$(ENVRUN) py.test --cov={{ cookiecutter.project_slug }} --cov-report term-missing -vs --cov-fail-under=80
 
+quality: lint type test
+
 generate-doc:
 	@$(ENVRUN) sphinx-apidoc -M -f -o docs {{ cookiecutter.project_slug }}
 
@@ -42,4 +44,4 @@ clean-doc:
 clean: clean-doc
 	@rm -Rf dist build
 
-.PHONY: install install-dev shell format lint mypy test doc
+.PHONY: install install-dev shell format lint mypy test quality doc
